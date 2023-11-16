@@ -1,0 +1,32 @@
+# Eclipse
+.settings/
+.classpath
+.project
+.metadata/
+
+# Maven
+target/
+pom.xml.*
+*.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Compiled bytecode
+*.class
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Dependency directories
+lib/
+
+# Eclipse-specific files
+*.launch
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
