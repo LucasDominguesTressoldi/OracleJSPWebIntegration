@@ -46,6 +46,7 @@
     <h1>ERROR</h1>
     <p>Ops! Parece que algo deu errado.</p>
     <p>Tente novamente mais tarde</p>
+    <a href="index.jsp"><button class="btn-error">Voltar à página principal</button></a>
   </section>
 </body>
 

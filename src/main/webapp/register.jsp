@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/body.css">
   <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/login/main-content.css">
+  <link rel="stylesheet" href="css/cadastro/main-content.css">
 </head>
 
 <body>
@@ -41,21 +41,35 @@
   <hr class="white-div">
 
   <section class="main-content">
-    <p style="text-align: center;">Olá! Seja muito bem vindo(a) novamente! Entre para<br> poder usufruir de nossas
-      tecnologias.</p>
-    <img class="hi" src="assets/hi.svg" alt="Uma mão balançando simbolizando um oi">
-    <div class="inputs">
-      <div class="cpf wrapped">
-        <label for="cpf">CPF</label>
-        <input type="text" id="cpf" placeholder="658.741.903-07" required>
-      </div>
-      <div class="pswd wrapped">
-        <label for="pswd">Senha</label>
-        <input type="text" id="pswd" placeholder="********" required>
-      </div>
-    </div>
-    <button class="sign-up" type="submit">Entrar</button>
-    <p>Ainda não possui uma conta? <a href="index.jsp"><span class="enter">Cadastre-se</span></a></p>
+    <p>Crie uma conta WisePay! É rápido e simples.</p>
+    <form action="register" method="POST" class="inputs">
+	    <div class="name wrapped">
+	        <label for="fullname">Nome Completo</label>
+	        <input type="text" id="fullname" name="fullname" required>
+	    </div>
+	    <div class="cpf wrapped">
+	        <label for="cpf">CPF</label>
+	        <input type="text" id="cpf" name="cpf" required>
+	    </div>
+	    <div class="pswd wrapped">
+	        <label for="pswd">Senha</label>
+	        <input type="password" id="pswd" name="pswd" required>
+	    </div>
+	    <div class="birth wrapped">
+	        <label for="birth">Data de Nascimento</label>
+	        <input type="text" id="birth" name="birth" required>
+	    </div>
+	    <div class="cel wrapped">
+	        <label for="cel">Telefone</label>
+	        <input type="tel" id="cel" name="cel" required>
+	    </div>
+	    <div class="email wrapped">
+	        <label for="email">Email</label>
+	        <input type="email" id="email" name="email" required>
+	    </div>
+	    <input class="sign-up" type="submit" value="Cadastrar">
+	</form>
+    <p>Já tem uma conta? <a href="index.jsp"><span class="enter">Entrar</span></a></p>
   </section>
 </body>
 

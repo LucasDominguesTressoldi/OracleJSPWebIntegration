@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/body.css">
   <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/cadastro/main-content.css">
+  <link rel="stylesheet" href="css/login/main-content.css">
 </head>
 
 <body>
@@ -41,35 +41,21 @@
   <hr class="white-div">
 
   <section class="main-content">
-    <p>Crie uma conta WisePay! É rápido e simples.</p>
-    <div class="inputs">
-      <div class="name wrapped">
-        <label for="fullname">Nome Completo</label>
-        <input type="text" id="fullname" placeholder="Matheus Silva" required>
-      </div>
-      <div class="cpf wrapped">
-        <label for="cpf">CPF</label>
-        <input type="text" id="cpf" placeholder="658.741.903-07" required>
-      </div>
-      <div class="pswd wrapped">
-        <label for="pswd">Senha</label>
-        <input type="text" id="pswd" placeholder="********" required>
-      </div>
-      <div class="birth wrapped">
-        <label for="birth">Data de Nascimento</label>
-        <input type="text" id="birth" placeholder="09/12/1991" required>
-      </div>
-      <div class="cel wrapped">
-        <label for="cel">Telefone</label>
-        <input type="text" id="cel" placeholder="(12)99654-3321" required>
-      </div>
-      <div class="email wrapped">
-        <label for="email">Email</label>
-        <input type="text" id="email" placeholder="meu.email@email.com" required>
-      </div>
-    </div>
-    <button class="sign-up" type="submit">Cadastrar</button>
-    <p>Já tem uma conta? <a href="login.jsp"><span class="enter">Entrar</span></a></p>
+    <p style="text-align: center;">Olá! Seja muito bem vindo(a) novamente! Entre para<br> poder usufruir de nossas
+      tecnologias.</p>
+    <img class="hi" src="assets/hi.svg" alt="Uma mão balançando simbolizando um oi">
+    <form action="login" method="POST" class="inputs">
+	    <div class="cpf wrapped">
+        	<label for="cpf">CPF</label>
+	    	<input type="text" id="cpf" name="cpf" required>
+      	</div>
+		<div class="pswd wrapped">
+        	<label for="password">Password</label>
+	    	<input type="password" id="password" name="password" required>
+      	</div>
+	    <input class="sign-up" type="submit" value="Entrar">
+	</form>
+    <p>Ainda não possui uma conta? <a href="register.jsp"><span class="enter">Cadastre-se</span></a></p>
   </section>
 </body>
 
