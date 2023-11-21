@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/body.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/home/main-content.css">
+  <link rel="stylesheet" href="css/responsiveness/home.css">
 </head>
 
 <body>
@@ -42,30 +43,30 @@
 
   <section class="home">
     <div class="top">
-      <h1 class="text">Olá, Matheus!<br>Seja Bem Vindo!</h1>
+      <h1 class="text">Olá, <%= request.getAttribute("name") %>!<br>Seja Bem Vindo!</h1>
       <div class="money limit">
         <span class="title">Limite Disponível</span>
-        <span class="price">R$2.331,77</span>
-        <span class="subtitle">De um total de R$3.452,85</span>
+        <span class="price">R$<%= request.getAttribute("creditLimit") %></span>
+        <span class="subtitle">De um total de R$5000</span>
       </div>
       <div class="balance">
         <span class="title">Saldo Total <img class="eye" src="assets/eye.svg" alt="Um olho aberto desenhado"></span>
-        <span class="price">R$5.528,31</span>
+        <span class="price">R$<%= request.getAttribute("balance") %></span>
       </div>
     </div>
     <div class="middle">
-      <button class="btn">Pagar com Pix</button>
-      <button class="btn">Pagar com Cartão</button>
-      <button class="btn">Depositar</button>
+      <a href="pix.jsp?cpf=<%= request.getParameter("cpf") %>"><button class="btn">Pagar com Pix</button></a>
+      <a href="card.jsp?cpf=<%= request.getParameter("cpf") %>"><button class="btn">Pagar com Cartão</button></a>
+      <a href="deposit.jsp?cpf=<%= request.getParameter("cpf") %>"><button class="btn">Depositar</button></a>
     </div>
     <div class="bottom">
       <div class="money invoice">
         <span class="title">Fatura à Pagar</span>
-        <span class="price">R$1.121,08</span>
+        <span class="price">R$<%= request.getAttribute("invoice") %></span>
         <span class="subtitle">Sua fatura vencerá dia 7</span>
       </div>
       <div class="invoice btns">
-        <button class="btn small">Pagar agora</button>
+        <a href="invoice.jsp?cpf=<%= request.getParameter("cpf") %>"><button class="btn small">Pagar agora</button></a>
         <button class="btn small">Renegociar fatura</button>
       </div>
     </div>

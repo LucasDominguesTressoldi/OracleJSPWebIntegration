@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/body.css">
   <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/error.css">
-  <link rel="stylesheet" href="css/responsiveness/error.css">
+  <link rel="stylesheet" href="css/login/main-content.css">
+  <link rel="stylesheet" href="css/responsiveness/payments.css">
 </head>
 
 <body>
@@ -41,13 +41,16 @@
 
   <hr class="white-div">
 
-  <section class="error">
-    <img class="icon" src="assets/error.svg"
-      alt="Uma carteira vazia com moscas voando como se estivessem saindo dela">
-    <h1>ERROR</h1>
-    <p>Ops! Parece que algo deu errado.</p>
-    <p>ERRO: <%= request.getAttribute("error_msg") %></p>
-    <a href="index.jsp"><button class="btn-error">Voltar à página principal</button></a>
+  <section class="main-content">
+    <p style="text-align: center;">PAGUE COM PIX.<br><br>É RÁPIDO E SIMPLES.</p>
+    <form action="pix" method="POST" class="inputs">
+    	<input type="hidden" id="cpf" name="cpf" value="<%= request.getParameter("cpf") %>" required>
+	    <div class="cpf wrapped">
+        	<label for="money">R$</label>
+	    	<input type="text" id="money" name="money" required>
+      	</div>
+	    <input class="sign-up" type="submit" value="TRANSFERIR AGORA">
+	</form>
   </section>
 </body>
 

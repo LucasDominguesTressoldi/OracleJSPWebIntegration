@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/body.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/login/main-content.css">
+  <link rel="stylesheet" href="css/responsiveness/login.css">
 </head>
 
 <body>

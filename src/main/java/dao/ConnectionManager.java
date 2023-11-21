@@ -19,9 +19,9 @@ public class ConnectionManager {
 
 	public Connection getConnection() {
 
-		final String URL = "jdbc:oracle:thin:@your_url";
-		final String USER = "your_user";
-		final String PSWD = "your_password";
+		final String URL = "jdbc:oracle:thin:@YOUR_URL";
+		final String USER = "YOUR_USER";
+		final String PSWD = "YOUR_PASSWORD";
 
 		Connection connection = null;
 
@@ -29,7 +29,7 @@ public class ConnectionManager {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			connection = DriverManager.getConnection(URL, USER, PSWD);
 		} catch (Exception e) {
-			throw new RuntimeException("ERRO: ", e);
+			throw new RuntimeException("ERROR: ", e);
 		}
 		return connection;
 	}
